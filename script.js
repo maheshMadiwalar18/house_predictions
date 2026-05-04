@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // 4. API Call
         try {
-            const response = await fetch('/predict', {
+            const response = await fetch('https://house-predictions-9tmi.onrender.com/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
