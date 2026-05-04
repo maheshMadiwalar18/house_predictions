@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Predictor | Smart Estimates</title>
+    <meta name="description" content="Predict house prices instantly using our AI-powered estimation tool. Professional UI for real estate analytics.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <main class="card">
+            <header>
+                <img src="house.png" alt="House Illustration" class="illustration" id="house-icon">
+                <h1>House Price Predictor</h1>
+                <p class="subtitle">Enter property details for a precise estimate</p>
+            </header>
+
+            <form id="prediction-form">
+                <div class="form-group">
+                    <label for="area">Area (sq ft)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="area" placeholder="Enter area in sq ft" min="1" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bedrooms">Bedrooms</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="bedrooms" placeholder="Number of bedrooms" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="bathrooms">Bathrooms</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="bathrooms" placeholder="Number of bathrooms" min="0" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age of House (years)</label>
+                    <div class="input-wrapper">
+                        <input type="number" id="age" placeholder="How old is the house?" min="0" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-predict" id="predict-btn">
+                    <span id="btn-text">Predict Price</span>
+                    <div class="spinner" id="btn-spinner"></div>
+                </button>
+
+                <div id="error-box" class="error-message"></div>
+            </form>
+
+            <section id="result-display" class="result-section">
+                <p class="result-label">Estimated Market Value</p>
+                <div class="result-value" id="price-output">₹ 0</div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
